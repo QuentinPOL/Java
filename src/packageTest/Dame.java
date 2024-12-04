@@ -22,22 +22,23 @@ public class Dame extends Humain{
     }
 
     // La dame se fait kidnapper
-    void kidnapperDame(Cowboy _cowboy)
+    void isKidnapped(Brigan brigand)
     {
         this.libreOrCaptive = true;
-        System.out.println("Au secours ! (" + _cowboy.getName() + ") m'a kidnapper !");
+        System.out.println("Au secours ! (" + brigand.getName() + ") m'a kidnapper !");
     }
 
     // La dame se fait liberer
-    void libererDame(Cowboy _cowboy)
+    void isLeberate(Cowboy cowboy)
     {
         this.libreOrCaptive = false;
-        System.out.println("Merci pour m'avoir libérer (" + _cowboy.getName() + ") !");
+        System.out.println("Merci pour m'avoir libérer (" + cowboy.getName() + ") !");
     }
 
-    void setColorRobe(String colorRobe) {
+    // Méthode pour changer la couleur de sa robe
+    void setColorRobe(String colorRobe)
+    {
         this.colorRobe = colorRobe;
-       System.out.println("Regardez ma nouvelle robe (" + colorRobe + ") !");
+        System.out.println("Regardez ma nouvelle robe (" + colorRobe + ") !");
     }
-
 }
