@@ -24,14 +24,14 @@ public class Brigan extends Humain{
     // Méthode pour kidnapper une dame
     void kidnapperDame(Dame dame)
     {
-        System.out.println("Ah ah ! (" + dame.getName() + "), tu es mienne désormais !");
+        System.out.println("Ah ah ! (" + dame.quelEstTonNom() + "), tu es mienne désormais !");
         dame.isKidnapped(this);
     }
 
     // Méthode d'emprisonnement par un cowboy
     void isJailed(Cowboy cowboy)
     {
-        System.out.println("Damned, je suis fait ! (" + cowboy.getName() + ") tu m’as eu !");
+        System.out.println("Damned, je suis fait ! (" + cowboy.quelEstTonNom() + ") tu m’as eu !");
         System.out.println("La récompense offerte est de " + this.getRecompenseOfferte() + "$ !");
     }
 
@@ -39,5 +39,11 @@ public class Brigan extends Humain{
     float getRecompenseOfferte()
     {
         return this.recompenseOfferte;
+    }
+
+    // Redéfinition de quelEstTonNom()
+    @Override
+    String quelEstTonNom() {
+        return super.quelEstTonNom() + " le " + look;
     }
 }

@@ -45,9 +45,4 @@ public class Humain {
     {
         return this.favoriteSoda;
     }
-
-    String getName()
-    {
-        return this.name;
-    }
 }

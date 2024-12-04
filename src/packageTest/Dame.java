@@ -25,14 +25,14 @@ public class Dame extends Humain{
     void isKidnapped(Brigan brigand)
     {
         this.libreOrCaptive = true;
-        System.out.println("Au secours ! (" + brigand.getName() + ") m'a kidnapper !");
+        System.out.println("Au secours ! (" + brigand.quelEstTonNom() + ") m'a kidnapper !");
     }
 
     // La dame se fait liberer
     void isLeberate(Cowboy cowboy)
     {
         this.libreOrCaptive = false;
-        System.out.println("Merci pour m'avoir libérer (" + cowboy.getName() + ") !");
+        System.out.println("Merci pour m'avoir libérer (" + cowboy.quelEstTonNom() + ") !");
     }
 
     // Méthode pour changer la couleur de sa robe
@@ -40,5 +40,11 @@ public class Dame extends Humain{
     {
         this.colorRobe = colorRobe;
         System.out.println("Regardez ma nouvelle robe (" + colorRobe + ") !");
+    }
+
+    // Redéfinition de quelEstTonNom()
+    @Override
+    String quelEstTonNom() {
+        return "Miss " + super.quelEstTonNom();
     }
 }

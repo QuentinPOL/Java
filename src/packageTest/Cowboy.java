@@ -24,13 +24,13 @@ public class Cowboy extends Humain {
     // Méthode pour tirer sur un brigand
     void shootOnBrigan(Brigan brigan)
     {
-        System.out.println("Le " + this.adjectif + " " + this.getName() + " tire sur " + brigan.getName() + ". PAN !");
+        System.out.println("Le " + this.adjectif + " " + this.quelEstTonNom() + " tire sur " + brigan.quelEstTonNom() + ". PAN !");
         System.out.println("Prend ça, crapule !");
     }
 
     void libererDame(Dame dame)
     {
-        System.out.println("Le cowboy" + this.getName() + ", flatte la dame : " + dame.getName() + " !");
+        System.out.println("Le cowboy" + this.quelEstTonNom() + ", flatte la dame : " + dame.quelEstTonNom() + " !");
         System.out.println("Il la libére donc !");
         dame.isLeberate(this);
         popularite++;
