@@ -7,8 +7,7 @@ public class Cowboy extends Humain {
 
     // Constructeur sans boisson  (pas défaut)
     Cowboy(String name, int popularite, String adjectif) {
-        super(name);
-
+        super(name, "Whisky"); // Boisson par défaut
         this.popularite = popularite;
         this.adjectif = adjectif;
     }
@@ -16,7 +15,6 @@ public class Cowboy extends Humain {
     // Constructeur avec tout les attributs
     Cowboy(String name, String favoriteSoda, int popularite, String adjectif) {
         super(name, favoriteSoda);
-
         this.popularite = popularite;
         this.adjectif = adjectif;
     }
@@ -34,5 +32,13 @@ public class Cowboy extends Humain {
         System.out.println("Il la libére donc !");
         dame.isLeberate(this);
         popularite++;
+    }
+
+    // Redéfinition de la méthode presenter
+    @Override
+    void presenter() {
+        super.presenter(); // Appel de la méthode de la classe Humain
+        parle("On dit de moi que je suis " + adjectif + ".");
+        parle("Ma popularité est de " + popularite + " !");
     }
 }

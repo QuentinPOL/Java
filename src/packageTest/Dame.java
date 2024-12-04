@@ -7,8 +7,7 @@ public class Dame extends Humain{
 
     // Constructeur sans boisson  (pas défaut)
     Dame(String name, String colorRobe, boolean libreOrCaptive) {
-        super(name);
-
+        super(name, "Lait"); // Boisson par défaut
         this.colorRobe = colorRobe;
         this.libreOrCaptive = libreOrCaptive;
     }
@@ -16,7 +15,6 @@ public class Dame extends Humain{
     // Constructeur avec tout les attributs
     Dame(String name, String favoriteSoda, String colorRobe, boolean libreOrCaptive) {
         super(name, favoriteSoda);
-
         this.colorRobe = colorRobe;
         this.libreOrCaptive = libreOrCaptive;
     }
@@ -46,5 +44,12 @@ public class Dame extends Humain{
     @Override
     String quelEstTonNom() {
         return "Miss " + super.quelEstTonNom();
+    }
+
+    // Redéfinition de la méthode presenter
+    @Override
+    void presenter() {
+        super.presenter(); // Appel de la méthode de la classe Humain
+        parle("Regardez ma belle robe de couleur " + colorRobe + " !");
     }
 }
